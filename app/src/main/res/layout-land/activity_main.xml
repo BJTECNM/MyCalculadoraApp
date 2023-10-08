@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            style="@style/Theme.MyCalculadoraApp"
+            layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Número 1"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Número 2"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <EditText
+                        android:id="@+id/num2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/num1"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+
+                <TextView
+                    android:id="@+id/resultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Resultado"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Operación a realizar"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="italic"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnSuma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suma"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+
+                    <Button
+                        android:id="@+id/btnMultiplicacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Multiplicación"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnResta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resta"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+
+                    <Button
+                        android:id="@+id/btnDivision"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="División"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
