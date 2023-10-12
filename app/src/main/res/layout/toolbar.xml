@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_toStartOf="@+id/historyList"
-            android:gravity="center"
+            android:layout_centerVertical="true"
             android:src="@drawable/baseline_restore_24" />
     </RelativeLayout>
 
