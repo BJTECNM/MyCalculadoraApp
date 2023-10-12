@@ -1,25 +1,51 @@
 package com.example.mycalculadoraapp
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
-    //var num1 = 0
-    //var num2 = 0
-    var resultado = 0
 
-    fun suma(num1: Int, num2: Int){
-        resultado = num1+num2
+    private val _resultado = MutableLiveData<Float>()
+
+    val resultado: LiveData<Float>
+        get() = _resultado
+
+    private val _num1 = MutableLiveData<Float>()
+
+    val num1: LiveData<Float>
+        get() = _num1
+
+    private val _num2 = MutableLiveData<Float>()
+
+    val num2: LiveData<Float>
+        get() = _num2
+
+    /*
+    fun resetNums() {
+        _num1.value = null
+        _num2.value = null
+    }
+     */
+
+    fun suma(num1: Float, num2: Float){
+        //_resultado.value = _resultado.value?.plus(num1)
+        _resultado.value = num1+num2
+        //resultado = num1+num2
     }
 
-    fun resta(num1: Int, num2: Int){
-        resultado = num1-num2
+    fun resta(num1: Float, num2: Float){
+        //resultado = num1-num2
+        _resultado.value = num1-num2
     }
 
-    fun multiplicacion(num1: Int, num2: Int){
-        resultado = num1*num2
+    fun multiplicacion(num1: Float, num2: Float){
+        //resultado = num1*num2
+        _resultado.value = num1*num2
     }
 
-    fun division(num1: Int, num2: Int){
-        resultado = num1/num2
+    fun division(num1: Float, num2: Float){
+        //resultado = num1/num2
+        _resultado.value = num1/num2
     }
 }
