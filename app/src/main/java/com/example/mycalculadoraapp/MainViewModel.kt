@@ -11,6 +11,7 @@ class MainViewModel : ViewModel() {
     val resultado: LiveData<Float>
         get() = _resultado
 
+    /*
     private val _num1 = MutableLiveData<Float>()
 
     val num1: LiveData<Float>
@@ -21,7 +22,6 @@ class MainViewModel : ViewModel() {
     val num2: LiveData<Float>
         get() = _num2
 
-    /*
     fun resetNums() {
         _num1.value = null
         _num2.value = null
@@ -29,23 +29,18 @@ class MainViewModel : ViewModel() {
      */
 
     fun suma(num1: Float, num2: Float){
-        //_resultado.value = _resultado.value?.plus(num1)
         _resultado.value = num1+num2
-        //resultado = num1+num2
     }
 
     fun resta(num1: Float, num2: Float){
-        //resultado = num1-num2
         _resultado.value = num1-num2
     }
 
     fun multiplicacion(num1: Float, num2: Float){
-        //resultado = num1*num2
         _resultado.value = num1*num2
     }
 
     fun division(num1: Float, num2: Float){
-        //resultado = num1/num2
         _resultado.value = num1/num2
     }
 }
