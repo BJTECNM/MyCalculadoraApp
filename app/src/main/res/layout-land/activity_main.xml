@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <include
-            style="@style/Theme.MyCalculadoraApp"
+            style="@style/AppTheme"
             layout="@layout/toolbar" />
 
         <LinearLayout
